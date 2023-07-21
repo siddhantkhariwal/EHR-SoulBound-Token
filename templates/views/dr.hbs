@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="styleDr.css">
+</head>
+
+<body>
+  <h1 class="heading">Doctor's Visit Form</h1>
+  <form class="input" method="post" enctype="multipart/form-data" action="/adddoctorvisit">
+    <div class="form-row">
+      <div class="form-group col-md-16">
+        <label for="text" class="problem">Disease</label>
+        <input type="text" class="form-control" id="inputEmail4" name="diaseases" placeholder="Ex- Diabeteis, High BP">
+      </div>
+      <div class="form-group col-md-16">
+        <label for="text" class="problem">Reason of visit</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="Ex-Fever, Nausea" name="reasonOfVisit">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="text" class="problem">Medicines</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="" name="medicine">
+    </div>
+    <div class="form-group">
+      <label for="text" class="problem">Side-effect</label>
+      <input type="text" class="form-control" id="tel" placeholder="Ex- Headache" name="sideEffect">
+    </div>
+    <div class="form-group">
+      <label for="text" class="problem">Is Recovered</label>
+      <select name="isRecovered" placeholder="Yes/No" id="isr">
+        <option disabled selected value> -- select -- </option>
+        <option value=True>Yes</option>
+        <option value=False>No</option>
+      </select>
+    </div>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="formFileMultiple" class="problem">Add prescription</label>
+      <input class="form-control" type="file" id="formFileMultiple" name="photo">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+  </form>
+  {{!--
+  <script src="./dr.js"></script> --}}
+</body>
+
+</html>
