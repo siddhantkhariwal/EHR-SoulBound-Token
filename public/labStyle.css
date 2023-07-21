@@ -1,0 +1,31 @@
+body {
+  background-color: #737DFE;
+  /* background-image: url(); */
+  background-image: url(./images/2.jpeg);
+  
+
+ }
+ .heading{
+  font-weight: 1600;
+  font-style: bold;
+  font-size: 35px;
+  align-items: center;
+  border-radius: 3px;
+  text-align: center;
+  margin: 5px;
+  padding: 15px;
+  letter-spacing: 0.8px;
+  
+ }
+ .form-label{
+  font-size: 16px;
+  padding: 4px;
+  font-weight: 500;
+  font-style: bold;
+  margin: 5px;
+  display-width:70%;
+  letter-spacing: 0.3px;
+ }
+ .input{
+  width: 50%;
+ }

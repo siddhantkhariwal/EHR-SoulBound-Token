@@ -1,0 +1,31 @@
+html body{
+    /* background-color: black; */
+    background-image: url("./images/4.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.addButtons{
+    display: flex;
+    
+    justify-content: center;
+    /* border: 7px red solid; */
+    margin-top: 50px;
+}
+
+#dr{
+    margin-right: 10px;
+}
+
+#lab{
+        margin-left: 10px;
+}
+
+
+  #firstTimeForm{
+    /* border: 7px greenyellow solid; */
+    margin-top: 70px;
+    width: 27%;
+    margin-left: 20px;
+    padding-left: 20px;
+  }

@@ -1,0 +1,43 @@
+body {
+  background-color: #FEEDCF;
+  background-image: url(./images/5.jpeg);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position-x: 100%;
+  background-position-y:0% ;
+ }
+ 
+ .heading{
+  font-weight: 1600;
+  font-style: bold;
+  font-size: 35px;
+  align-items: center;
+  border-radius: 3px;
+  text-align: center;
+  margin: 5px;
+  padding: 15px;
+  letter-spacing: 0.8px;
+  color: saddlebrown;
+background-image: linear-gradient(#d99a5a, #d99a5a), linear-gradient(#d99a5a, #d99a5a);
+background-size: 0% 0.1em;
+background-position-y: 100%;
+background-position-x: 0%, 100%;
+background-repeat: no-repeat;
+transition: background-size 0.2s ease-in-out;
+text-decoration: none;
+
+}
+
+ 
+ .problem{
+  font-size: 16px;
+  padding: 4px;
+  font-weight: 500;
+  font-style: bold;
+  margin: 5px;
+  display-width:70%;
+  letter-spacing: 0.3px;
+ }
+ .input{
+  width: 25%;
+ }

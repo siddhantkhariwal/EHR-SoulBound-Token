@@ -1,0 +1,20 @@
+:root {
+  /* fonts */
+  --font-manrope: Manrope;
+
+  /* font sizes */
+  --font-size-sm: 16px;
+  --font-size-base: 18px;
+
+  /* Colors */
+  --color-gray-100: rgba(0, 0, 0, 0.6);
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Paddings */
+  --padding-sm: 8px;
+  --padding-md: 24px;
+
+  /* border radiuses */
+  --br-md: 8px;
+}
