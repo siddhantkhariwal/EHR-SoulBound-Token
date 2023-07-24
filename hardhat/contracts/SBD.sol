@@ -1,48 +1,42 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+pragma solidity ^0.8.4;
+ 
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Counters.sol"; 
+ 
+contract Soulbound is ERC721, ERC721URIStorage, Ownable {
+    using Counters for Counters.Counter;
+ 
+    Counters.Counter private _tokenIdCounter;
+ 
+    constructor() ERC721("SoulBound", "SBT") {}
 
-contract SoulboundToken is ERC721Enumerable, Ownable {
-    
-
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) {}
-
-    struct Token {
-        address owner;  // Address of the token owner
-        string metadata; // Token metadata (e.g., token information, IPFS hash, etc.)
+    function _beforeTokenTransfer(address from, address to, uint256 tokenId, uint256 batchSize)
+        internal
+        override(ERC721)
+    {
+        require(from == address(0), "Token not transferable");
+        super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
-
-    mapping(uint256 => Token) private tokens;
-
-    uint256 private tokenIdCounter = 0;
-
-    function mintToken(string memory metadata) public onlyOwner {
-        tokenIdCounter++;
-        _safeMint(msg.sender, tokenIdCounter);
-
-        // Assign token attributes and owner
-        tokens[tokenIdCounter] = Token({
-            owner: msg.sender,
-            metadata: metadata
-            // Add other attributes as needed
-        });
+ 
+    function safeMint(address to) public onlyOwner {
+        uint256 tokenId = _tokenIdCounter.current();
+        _tokenIdCounter.increment();
+        _safeMint(to, tokenId);
     }
-
-    function transferFrom(address from, address to, uint256 tokenId) public override {
-        require(tokens[tokenId].owner == msg.sender, "You can only transfer your own soulbound token.");
-        revert("Transfers are not allowed for soulbound tokens.");
+  
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+        super._burn(tokenId);
     }
-
-    function safeTransferFrom(address from, address to, uint256 tokenId) public override {
-        require(tokens[tokenId].owner == msg.sender, "You can only transfer your own soulbound token.");
-        revert("Transfers are not allowed for soulbound tokens.");
+ 
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        override(ERC721, ERC721URIStorage)
+        returns (string memory)
+    {
+        return super.tokenURI(tokenId);
     }
-
-    function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory _data) public override {
-        require(tokens[tokenId].owner == msg.sender, "You can only transfer your own soulbound token.");
-        revert("Transfers are not allowed for soulbound tokens.");
-    }
-
 }
