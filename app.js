@@ -9,8 +9,8 @@ const config = {
     authRequired: false,
     auth0Logout: true,
     baseURL: "http://localhost:3000",
-    clientID: "KirajKIwXoptDESruKIxoXhAUYvKTPOc",
-    issuerBaseURL: "https://dev-f5vbpjo77htazft8.us.auth0.com/",
+    clientID: "zqR5U2so4oyZcyV84WZ8ii03GelLSTQg",
+    issuerBaseURL: "https://dev-yumfn7jyqrydl3eq.us.auth0.com/",
     secret: "LONG_RANDOM_STRING",
 }
 const userRoute = require("./routes/userRoute")
