@@ -483,6 +483,16 @@ a:hover {
   padding-left: 155px;
   margin-left: 155px;
 }
-/* #abc2img{
-  width: 50%;
-} */
+
+.title-text {
+  color: #0047ab; /* Deep blue color for the title */
+  font-size: 30px; /* Increased font size for the title */
+  font-weight: bold;
+}
+
+.subtitle-text {
+  color: #333333; /* Dark gray color for the subtitle */
+  font-size: 22px; /* Increased font size for the subtitle */
+  line-height: 1.5;
+  margin-top: 10px;
+}
