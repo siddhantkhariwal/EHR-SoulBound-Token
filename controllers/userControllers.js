@@ -124,6 +124,7 @@ exports.qrGenerator = async (req, res) => {
 exports.qrLink = async (req, res) => {
     const { email } = req.params
     const user = User.findOne({ email })
+    console.log(user)
     if (user.qrExpiry > Date.now()) {
         return res.json({ status: "qr expires" })
     }

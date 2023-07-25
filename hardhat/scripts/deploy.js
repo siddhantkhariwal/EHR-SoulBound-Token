@@ -5,7 +5,7 @@ async function main() {
   await hre.run('compile');
   const SoulboundToken = await hre.ethers.getContractFactory("Soulbound");
 
-  const contract = await SBD.deploy("Soulbound Token", "SBT");
+  const contract = await SoulboundToken.deploy("Soulbound Token", "SBT");
 
   await contract.deployed();
 

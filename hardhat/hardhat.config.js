@@ -10,8 +10,8 @@ module.exports = {
     }
   },
   paths: {
-    sources: "./hardhat/contracts",
-    artifacts: "./hardhat/artifacts",
+    sources: "./contracts",
+    artifacts: "./artifacts",
   }
 };
 
