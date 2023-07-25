@@ -48,16 +48,21 @@ exports.addDoctorVisit = async (req, res) => {
     console.log(req.files)
     console.log(req.body)
     const { photo } = req.files
-    const result = await cloudinary.uploader.upload(photo.tempFilePath, {
-        folder: "prescription",
-    })
-    const { secure_url, public_id } = result
-    const doctorVisit = await DoctorVisit.create({
-        ...req.body,
-        prescription: { id: public_id, securedUrl: secure_url },
-        user: user._id,
-    })
-    res.redirect("/dashboard")
+    try {
+        const result = await cloudinary.uploader.upload(photo.tempFilePath, {
+            folder: "prescription",
+        })
+        const { secure_url, public_id } = result
+        const doctorVisit = await DoctorVisit.create({
+            ...req.body,
+            prescription: { id: public_id, securedUrl: secure_url },
+            user: user._id,
+        })
+        res.redirect("/dashboard")
+    } catch (error) {
+        console.error(error)
+        res.status(500).send("Something went wrong")
+    }
 }
 exports.addLabReport = async (req, res) => {
     const user = await User.findOne({ email: req.oidc.user.email })
