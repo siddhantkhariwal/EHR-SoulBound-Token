@@ -1,10 +1,3 @@
-// document.getElementById("dr").addEventListener("click", function () {
-//     window.open("dr")
-// })
-// document.getElementById("lab").addEventListener("click", function () {
-//     window.open("lab")
-// })
-
 window.addEventListener("load", async (e) => {
     const url = "/updatedetails"
     const res = await fetch(url)

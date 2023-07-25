@@ -1,8 +1,37 @@
 body {
+  /* Background Gradient */
+  background: linear-gradient(to right, #c0c0aa, #1cefff);
   margin: 0;
-  line-height: normal;
-  background: linear-gradient(to top, #e0eafc, #cfdef3);
+  font-family: 'Manrope', sans-serif;
+  color: #333333; /* General text color (dark gray) */
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0047ab; /* Heading text color (deep blue) */
+}
+
+a {
+  color: #0099ff; /* Link text color (brighter blue) */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button and interactive elements */
+.button {
+  background-color: #00cc99; /* Button background color (greenish-blue) */
+  color: #ffffff; /* Button text color (white) */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Additional styles for other elements in the website */
+/* ... */
+
 .background-icon,
 .saly-3d-illustration-pack-f {
   position: absolute;
@@ -231,7 +260,9 @@ body {
 }
 .bgcontact{
   height:500px;
-  background: linear-gradient(to right, #5c258d, #4389a2); 
+  background: linear-gradient(to left, #9cecfb, #65c7f7, #0052d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  align-items: center;
+  justify-content: center;
 }
 .screen {
   position: relative;
@@ -320,7 +351,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: #5c258d;
+  color: #fff;
   font-size: 26px;
 }
 
@@ -332,13 +363,13 @@ body {
   bottom: -10px;
   width: 25px;
   height: 4px;
-  background: #5c258d;
+  background: #fff;
 }
 
 .app-contact {
   margin-top: auto;
   font-size: 8px;
-  color: #888;
+  color: #fff;
 }
 
 .app-form-group {
@@ -378,7 +409,7 @@ body {
 .app-form-button {
   background: none;
   border: none;
-  color: #8814ed;
+  color: #fff;
   font-size: 14px;
   cursor: pointer;
   outline: none;
@@ -456,6 +487,6 @@ body {
   padding-left: 155px;
   margin-left: 155px;
 }
-#abc2img{
+/* #abc2img{
   width: 50%;
-}
+} */
