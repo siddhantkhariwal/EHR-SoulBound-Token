@@ -65,10 +65,6 @@ a:hover {
   cursor: pointer;
   border: 0;
   padding: 12px var(--padding-md);
-  background-color: var(--color-white);
-  position: absolute;
-  top: 32px;
-  left: 1164px;
   border-radius: var(--br-md);
   overflow: hidden;
   display: flex;
