@@ -1,5 +1,10 @@
 require("dotenv").config({path:__dirname+'/config.env'})
 require("./config/conn")
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT, () => {
+    console.log(`server is up and running on port ${PORT}`)
+})
 const express = require("express")
 const cookieParser = require("cookie-parser")
 const app = express()
