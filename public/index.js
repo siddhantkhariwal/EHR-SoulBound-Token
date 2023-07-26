@@ -56,6 +56,5 @@ const qrbtn = document
         })
         const data = await res.json()
         console.log(data)
-        alert("http://localhost:3000/qr/<your-email>")
     })
 // window.open('https://support.wwf.org.uk', '_blank');
